@@ -106,7 +106,7 @@ const Footer = () => {
 			<div className="text-[14px] text-center mt-10 text-[#48505E]">
 				© 2025 OWA by Pepcode Inc. All Rights Reserved.{' '}
 				<a
-					href="https://ploutos.dev"
+					href="https://ploutospage.com.ng/"
 					className="underline text-[#4D2A73]"
 					target="_blank"
 				>
