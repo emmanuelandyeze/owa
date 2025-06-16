@@ -64,7 +64,7 @@ export default function ContactUs() {
 			</button>
 			<div className="max-w-[975px] flex flex-col md:flex-row justify-center items-center pt-[50px] gap-20 mx-auto">
 				{/* Left Side */}
-				<div className="md:w-1/2">
+				<div className="">
 					<div className="w-[404px] flex flex-col gap-[20px]">
 						<h1 className="text-[48px] leading-[48px] font-[700] text-[#4D2A73]">
 							Get in Touch with OWA
@@ -142,7 +142,7 @@ export default function ContactUs() {
 				{/* Right Side - Form */}
 				<form
 					onSubmit={handleSubmit}
-					className="md:w-[460px] w-full bg-[#F3F3F3] p-[40px] rounded-[20px] space-y-4"
+					className=" w-full bg-[#F3F3F3] p-[40px] rounded-[20px] space-y-4"
 				>
 					<div className="flex flex-col md:flex-row gap-4">
 						<div className="flex flex-col gap-[4px]">
@@ -206,7 +206,7 @@ export default function ContactUs() {
 
 					<button
 						type="submit"
-						className="bg-purple-800 hover:bg-purple-900 text-white py-3 px-6 rounded-md w-full"
+						className="bg-purple-900 hover:bg-purple-800 text-white py-3 px-6 rounded-md w-full"
 					>
 						Send message
 					</button>

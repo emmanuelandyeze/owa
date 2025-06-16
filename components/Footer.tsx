@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
 	return (
-		<footer className="bg-white text-[#4D2A73] py-12 px-6 md:px-20 relative overflow-hidden">
+		<footer className="bg-white text-[#4D2A73] py-12 px-6 md:px-44 relative overflow-hidden">
 			<div className="flex flex-col md:flex-row justify-between gap-12">
 				{/* Logo */}
 				<div className="flex-shrink-0">

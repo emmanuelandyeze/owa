@@ -1,23 +1,39 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+			const handleScroll = () => {
+				setScrolled(window.scrollY > 5);
+			};
+			window.addEventListener('scroll', handleScroll);
+			return () =>
+				window.removeEventListener('scroll', handleScroll);
+		}, []);
 
 	return (
-		<header className="fixed top-0 left-0 w-full bg-[#f4f2f7]/60 border-b border-[#E3DCEC] z-50">
+		<header
+			className={`fixed top-0 left-0 w-full  border-b border-[#E3DCEC] z-50 ${
+				scrolled
+					? 'bg-[#f4f2f7]/60 backdrop-blur-lg'
+					: 'bg-transparent'
+			}`}
+		>
 			<nav className="max-w-[1240px] mx-auto flex justify-between items-center h-[80px] px-0">
 				{/* Logo */}
 				<Link href="/">
 					<Image
 						alt="OWA Logo"
 						src="/images/logo.png"
-						width={70}
-						height={100}
+						width={60}
+						height={60}
 						className="h-auto w-auto"
 						priority
 					/>

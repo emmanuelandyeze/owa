@@ -4,7 +4,7 @@ import React from "react";
 
 const SectionThree = () => {
 	return (
-		<section className="w-[1240px] mx-auto px-4 py-12 md:px-0 space-y-12">
+		<section className="w-[1240px] mx-auto px-4 pt-0 pb-12 md:px-0 space-y-12">
 			{/* How It Works */}
 			<div className="bg-[#4D2A73] md:justify-between text-white rounded-[24px] p-8 md:p-16 flex flex-col md:flex-row gap-8 items-center relative">
 				<div className="w-[988px] flex flex-row justify-between ">
