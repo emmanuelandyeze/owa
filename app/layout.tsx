@@ -1,39 +1,46 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono, Hanken_Grotesk } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import {
+	Geist,
+	Geist_Mono,
+	Hanken_Grotesk,
+} from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+	variable: '--font-geist-sans',
+	subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: '--font-geist-mono',
+	subsets: ['latin'],
 });
 
 const hanken_grotesk = Hanken_Grotesk({
-  variable: "--font-hanken-grotesk",
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
+	variable: '--font-hanken-grotesk',
+	weight: ['300', '400', '500', '600', '700'],
+	subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Owa by Pepcode",
-  description: "Smart Bookkeeping for Every Market Woman",
+	title: 'Owa by Pepcode',
+	description: 'Smart Bookkeeping for Every Market Woman',
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" className={hanken_grotesk.className}>
-      <body
-      >
-        {children}
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" className={hanken_grotesk.className}>
+			<body>
+				<Navbar />
+				{children}
+				<Footer />
+			</body>
+		</html>
+	);
 }
