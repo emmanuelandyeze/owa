@@ -95,7 +95,7 @@ export default function ContactUs() {
 								Socials:
 							</strong>
 							<a
-								href="https://instagram.com" // Replace with actual links
+								href="https://www.instagram.com/owa_bypepcode1/" // Replace with actual links
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-700 hover:text-purple-800"
@@ -103,20 +103,12 @@ export default function ContactUs() {
 								<FaInstagram size={24} />
 							</a>
 							<a
-								href="https://facebook.com" // Replace with actual links
+								href="https://www.facebook.com/profile.php?id=61576512572218" // Replace with actual links
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-700 hover:text-purple-800"
 							>
 								<FaFacebook size={24} />
-							</a>
-							<a
-								href="https://twitter.com" // Replace with actual links
-								target="_blank"
-								rel="noopener noreferrer"
-								className="text-gray-700 hover:text-purple-800"
-							>
-								<FaTwitter size={24} />
 							</a>
 						</p>
 					</div>
