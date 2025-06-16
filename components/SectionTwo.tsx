@@ -4,14 +4,14 @@ import React from 'react';
 
 const SectionTwo = () => {
 	return (
-		<section className="w-full mx-auto py-12 md:px-20">
+		<section className="w-full mx-auto py-12 px-5 md:px-20">
 			{/* Top Section */}
-			<div className="bg-[#EDEAF1] w-[1240px] mx-auto rounded-[24px] p-12 md:pl-34 md:py-16 flex flex-col lg:flex-row justify-between items-center gap-8 relative">
-				<div className="w-[457px] space-y-[20px]">
-					<h2 className="text-[#4D2A73] leading-[40px] text-[40px] md:text-[40px] font-[700]">
+			<div className="bg-[#EDEAF1] w-full md:w-[1240px] overflow-hidden mx-auto rounded-[24px] px-6 pt-6 pb-40 md:p-12 md:pl-34 md:py-16 flex flex-col lg:flex-row justify-between items-start md:items-center gap-8 relative">
+				<div className="md:w-[457px] space-y-[20px]">
+					<h2 className="text-[#4D2A73] leading-[28px] md:leading-[40px] text-[24px] font-[600] md:text-[40px] md:font-[700]">
 						OWA is created to help your business
 					</h2>
-					<p className="text-[#323C49] text-[20px] md:text-[20px] leading-[24px] font-[400]">
+					<p className="text-[#323C49] text-[14px] md:text-[20px] leading-[20px] md:leading-[24px] font-[400]">
 						We send friendly, trained agents to your market
 						to help you record your stock and set up your
 						books
@@ -27,7 +27,7 @@ const SectionTwo = () => {
 						className="object-cover rounded-xl"
 					/>
 					{/* Labels */}
-					<div className="absolute flex gap-1 top-4 -left-40 bg-white border border-[#4D2A73] h-[41px] w-[200px] justify-left items-center rounded-[4px] px-2 py-1 text-sm shadow-sm">
+					<div className="absolute flex gap-1 bottom-20 -left-6 md:top-4 md:-left-40 bg-white border border-[#4D2A73] h-[41px] w-[200px] justify-left items-center rounded-[4px] px-2 py-1 text-sm shadow-sm">
 						<svg
 							width="22"
 							height="21"
@@ -52,7 +52,7 @@ const SectionTwo = () => {
 							No smartphone required
 						</p>
 					</div>
-					<div className="absolute flex gap-1 bottom-4 -left-40 bg-white border border-[#4D2A73] h-[41px] w-[200px] justify-left items-center rounded-[4px] px-2 py-1 text-sm shadow-sm">
+					<div className="absolute flex gap-1 -top-3 -right-6 md:top-60 md:-left-40 bg-white border border-[#4D2A73] h-[41px] w-[200px] justify-left items-center rounded-[4px] px-2 py-1 text-sm shadow-sm">
 						<svg
 							width="22"
 							height="21"
@@ -77,7 +77,7 @@ const SectionTwo = () => {
 							We meet you where you are
 						</p>
 					</div>
-					<div className="absolute flex gap-1 top-40 -right-20 bg-white border border-[#4D2A73] h-[41px] w-[200px] justify-left items-center rounded-[4px] px-2 py-1 text-sm shadow-sm">
+					<div className="absolute flex gap-1 bottom-0 -right-6 md:top-40 md:-right-20 bg-white border border-[#4D2A73] h-[41px] w-[200px] justify-left items-center rounded-[4px] px-2 py-1 text-sm shadow-sm">
 						<svg
 							width="22"
 							height="21"
@@ -103,7 +103,7 @@ const SectionTwo = () => {
 						</p>
 					</div>
 				</div>
-				<div className="absolute bottom-0 left-0">
+				<div className="absolute -bottom-4 -left-4 md:bottom-0 md:left-0">
 					<svg
 						width="134"
 						height="134"
@@ -132,7 +132,7 @@ const SectionTwo = () => {
 			{/* Bottom Section */}
 			<div className="mt-10 flex flex-col md:flex-row justify-center gap-6">
 				{/* Left Box */}
-				<div className="bg-[#F3F6FC] overflow-hidden flex flex-col justify-center pr-8 pl-28 py-8 w-[606px] h-[466px] rounded-[24px] space-y-6 relative">
+				<div className="bg-[#F3F6FC] overflow-hidden flex flex-col justify-center pr-8 pl-4 pt-8 pb-20 md:pl-28 md:py-8 md:w-[606px] h-[466px] rounded-[24px] space-y-6 relative">
 					<div className="flex items-start gap-4">
 						<div className="border border-[#C6CAD0] rounded-[8px] p-2">
 							<svg
@@ -153,10 +153,10 @@ const SectionTwo = () => {
 							</svg>
 						</div>
 						<div className="flex flex-col gap-[8px]">
-							<h3 className="text-[24px] font-[600] text-[#323C49]">
+							<h3 className="text-[18px] md:text-[24px] font-[600] text-[#323C49]">
 								Inventory management
 							</h3>
-							<p className="text-[16px] font-[400] text-[#323C49]">
+							<p className="text-[14px] md:text-[16px] font-[400] text-[#323C49]">
 								Know exactly what you have in stock
 							</p>
 						</div>
@@ -177,10 +177,10 @@ const SectionTwo = () => {
 							</svg>
 						</div>
 						<div className="flex flex-col gap-[8px]">
-							<h3 className="text-[24px] font-[600] text-[#323C49]">
+							<h3 className="text-[18px] md:text-[24px] font-[600] text-[#323C49]">
 								Sales & Expense Tracking
 							</h3>
-							<p className="text-[16px] font-[400] text-[#323C49]">
+							<p className="text-[14px] md:text-[16px] font-[400] text-[#323C49]">
 								Record what you sell and what you spend
 							</p>
 						</div>
@@ -201,10 +201,10 @@ const SectionTwo = () => {
 							</svg>
 						</div>
 						<div className="flex flex-col gap-[8px]">
-							<h3 className="text-[24px] font-[600] text-[#323C49]">
+							<h3 className="text-[18px] md:text-[24px] font-[600] text-[#323C49]">
 								Debt Management
 							</h3>
-							<p className="text-[16px] font-[400] text-[#323C49]">
+							<p className="text-[14px] md:text-[16px] font-[400] text-[#323C49]">
 								Keep track of who owes you and how much
 							</p>
 						</div>
@@ -231,7 +231,7 @@ const SectionTwo = () => {
 				</div>
 
 				{/* Right Box */}
-				<div className="bg-[#FFFEEF] overflow-hidden flex flex-col justify-center pr-8 pl-28 py-8 w-[606px] h-[466px] rounded-[24px] space-y-6 relative">
+				<div className="bg-[#FFFEEF] overflow-hidden flex flex-col justify-center pr-8 pl-4 md:pl-28 pt-8 pb-20 md:w-[606px] h-[466px] rounded-[24px] space-y-6 relative">
 					<div className="flex items-start gap-4">
 						<div className="border border-[#C6CAD0] rounded-[8px] p-2">
 							<svg
@@ -248,10 +248,10 @@ const SectionTwo = () => {
 							</svg>
 						</div>
 						<div className="flex flex-col gap-[8px]">
-							<h3 className="text-[24px] font-[600] text-[#323C49]">
+							<h3 className="text-[18px] md:text-[24px] font-[600] text-[#323C49]">
 								Weekly Summaries
 							</h3>
-							<p className="text-[16px] font-[400] text-[#323C49]">
+							<p className="text-[14px] md:text-[16px] font-[400] text-[#323C49]">
 								Understand your profit in simple terms
 							</p>
 						</div>
@@ -272,10 +272,10 @@ const SectionTwo = () => {
 							</svg>
 						</div>
 						<div className="flex flex-col gap-[8px]">
-							<h3 className="text-[24px] font-[600] text-[#323C49]">
+							<h3 className="text-[18px] md:text-[24px] font-[600] text-[#323C49]">
 								Offline & Agent Support
 							</h3>
-							<p className="text-[16px] font-[400] text-[#323C49]">
+							<p className="text-[14px] md:text-[16px] font-[400] text-[#323C49]">
 								No internet? No problem, we come to you
 							</p>
 						</div>
@@ -300,10 +300,10 @@ const SectionTwo = () => {
 							</svg>
 						</div>
 						<div className="flex flex-col gap-[8px]">
-							<h3 className="text-[24px] font-[600] text-[#323C49]">
+							<h3 className="text-[18px] md:text-[24px] font-[600] text-[#323C49]">
 								Digital & paper logbook
 							</h3>
-							<p className="text-[16px] font-[400] text-[#323C49]">
+							<p className="text-[14px] md:text-[16px] font-[400] text-[#323C49]">
 								We give you a record book that works better
 								for you
 							</p>

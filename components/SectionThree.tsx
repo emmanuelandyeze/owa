@@ -4,10 +4,10 @@ import React from "react";
 
 const SectionThree = () => {
 	return (
-		<section className="w-[1240px] mx-auto px-4 pt-0 pb-12 md:px-0 space-y-12">
+		<section className="md:w-[1240px] mx-auto px-4 pt-0 pb-12 md:px-0 space-y-12">
 			{/* How It Works */}
-			<div className="bg-[#4D2A73] md:justify-between text-white rounded-[24px] p-8 md:p-16 flex flex-col md:flex-row gap-8 items-center relative">
-				<div className="w-[988px] flex flex-row justify-between ">
+			<div className="bg-[#4D2A73] md:justify-between text-white rounded-[24px] pt-8 px-4 pb-40 md:p-16 flex flex-col md:flex-row gap-8 items-center relative">
+				<div className="md:w-[988px] flex md:flex-row flex-col-reverse justify-between gap-10 md:gap-0 ">
 					{/* Image */}
 					<div className="w-full max-w-[358px] border-[2px] border-[#fff] h-[305px] rounded-xl overflow-hidden relative">
 						<Image
@@ -20,7 +20,7 @@ const SectionThree = () => {
 
 					{/* Text Content */}
 					<div className="justify-end space-y-4">
-						<h2 className="text-2xl md:text-[40px] font-[700]">
+						<h2 className="text-[24px] md:text-[40px] font-[700]">
 							How it works
 						</h2>
 						<ul className="space-y-[20px] text-base">
@@ -39,7 +39,7 @@ const SectionThree = () => {
 										/>
 									</svg>
 								</span>{' '}
-								<span className="text-[20px] font-[400] text-[#fff]">
+								<span className="text-[16px] md:text-[20px] font-[400] text-[#fff]">
 									Our agent visits your stall
 								</span>
 							</li>
@@ -58,7 +58,7 @@ const SectionThree = () => {
 										/>
 									</svg>
 								</span>{' '}
-								<span className="text-[20px] font-[400] text-[#fff]">
+								<span className="text-[16px] md:text-[20px] font-[400] text-[#fff]">
 									We help you record your inventory and
 									expenses
 								</span>
@@ -78,7 +78,7 @@ const SectionThree = () => {
 										/>
 									</svg>
 								</span>{' '}
-								<span className="text-[20px] font-[400] text-[#fff]">
+								<span className="text-[16px] md:text-[20px] font-[400] text-[#fff]">
 									You get a personalized logbook
 								</span>
 							</li>
@@ -97,7 +97,7 @@ const SectionThree = () => {
 										/>
 									</svg>
 								</span>{' '}
-								<span className="text-[20px] font-[400] text-[#fff]">
+								<span className="text-[16px] md:text-[20px] font-[400] text-[#fff]">
 									We check in regularly to help you stay on
 									track
 								</span>
@@ -107,7 +107,7 @@ const SectionThree = () => {
 				</div>
 
 				{/* Corner SVG */}
-				<div className="absolute bottom-0 right-0">
+				<div className="absolute md:bottom-0 -bottom-4 -left-4 md:right-0">
 					<svg
 						width="132"
 						height="132"
@@ -147,17 +147,17 @@ const SectionThree = () => {
 			</div>
 
 			{/* Why We Created OWA */}
-			<div className="bg-[#F6F6F9] rounded-[24px] p-8 md:p-16 flex flex-col md:flex-col  relative">
+			<div className="bg-[#F6F6F9] rounded-[24px] px-4 pt-8 pb-32 md:p-16 flex flex-col md:flex-col  relative">
 				<div className="max-w-2xl space-y-4">
-					<h2 className="text-[#4D2A73] text-2xl md:text-[40px] font-[700]">
+					<h2 className="text-[#4D2A73] text-[24px] md:text-[40px] font-[700]">
 						Why we created OWA
 					</h2>
-					<p className="text-[#323C49] text-[20px] font-[400] leading-[24px]">
+					<p className="text-[#323C49] text-[16px] md:text-[20px] font-[400] md:leading-[24px]">
 						We believe every market woman deserves the tools
 						to grow her business. But we also know that many
 						women are excluded from tech.
 					</p>
-					<p className="text-[#323C49] text-[20px] font-[400] leading-[24px] mb-10">
+					<p className="text-[#323C49] text-[16px] md:text-[20px] font-[400] md:leading-[24px] mb-10">
 						That’s why we built OWA – a simple bookkeeping
 						process supported by real people who understand
 						your market and your challenges.
@@ -165,13 +165,38 @@ const SectionThree = () => {
 				</div>
 				<a
 					href="/contact"
-					className="py-[10px] px-[16px] font-[400] w-[250px] text-center text-[14px] border-[1px] bg-[#4D2A73] text-[#FFF] cursor-pointer border-[#4D2A73] rounded-[4px] transition"
+					className="py-[10px] px-[16px] font-[400] md:w-[250px] text-center text-[14px] border-[1px] bg-[#4D2A73] text-[#FFF] cursor-pointer border-[#4D2A73] rounded-[4px] transition"
 				>
 					Contact us today
 				</a>
 
+				<div className="absolute block md:hidden bottom-0 right-0">
+					<svg
+						width="81"
+						height="85"
+						viewBox="0 0 81 85"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M2 36.4689C16.3334 -17.1735 30.6666 -1.47411 45 37.7746C59.3335 77.023 73.6665 92.7228 88 39.0804"
+							stroke="#4D2A73"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+						<path
+							d="M2 50.9197C16.3334 -2.72269 30.6666 12.9771 45 52.2255C59.3335 91.474 73.6665 107.174 88 53.5313"
+							stroke="#4D2A73"
+							stroke-width="3"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</div>
+
 				{/* Right Side SVG */}
-				<div className="absolute bottom-0 right-20">
+				<div className="absolute hidden md:block bottom-0 right-20">
 					<svg
 						width="294"
 						height="229"
