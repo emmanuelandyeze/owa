@@ -48,7 +48,7 @@ export default function BecomeAgent() {
 	};
 
 	return (
-		<div className="min-h-screen max-w-[1380px] mx-auto flex flex-col items-center p-0 md:p-8 lg:px-20 py-28 bg-white">
+		<div className="min-h-screen max-w-[1380px] mx-auto flex flex-col items-center p-0 md:p-8 lg:px-20 md:pt-28 py-28 bg-white">
 			{/* Back Button - Positioned independently for better mobile flow */}
 			<button
 				onClick={() => router.back()}
