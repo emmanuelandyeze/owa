@@ -64,7 +64,7 @@ const Landing = () => {
 					</g>
 				</svg>
 			</div>
-			<div className="w-full md:w-[807px] px-4 md:px-0 z-20 md:h-[451px] pt-28 md:mt-20 md:mb-10 flex flex-col justify-center items-center gap-[8px]">
+			<div className="w-full md:w-[807px] px-4 md:px-0 z-20 md:h-[451px] pt-36 md:mt-20 md:mb-10 flex flex-col justify-center items-center gap-[8px]">
 				<h1 className="text-[#4D2A73] font-[600] md:font-[700] text-[24px] md:text-[56px] leading-[28px] md:leading-[64px] text-left md:text-center">
 					Smart Bookkeeping for Every Market Woman
 				</h1>
