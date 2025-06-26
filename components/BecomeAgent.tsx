@@ -31,7 +31,7 @@ const BecomeAgent = () => {
 								trustworthy, and motivated individuals to
 								make that happen.
 							</p>
-							<p className="text-[#323C49] text-[16px] md:text-[20px] font-[400] leading-[24px] mb-10">
+							<p className="text-[#323C49] text-[16px] md:text-[20px] font-[400] leading-[24px] mb-5">
 								As an Owa Agent, you’ll become a crucial
 								link in this ecosystem, helping market women
 								track their inventories, manage their
