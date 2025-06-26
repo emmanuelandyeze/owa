@@ -1,8 +1,9 @@
 'use client';
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import {submitToGoogleSheet} from '../actions.js'
 
-interface FormData {
+interface AgentFormData {
 	firstName: string;
 	lastName: string;
 	email: string;
@@ -13,14 +14,15 @@ interface FormData {
 
 export default function BecomeAgent() {
 	const router = useRouter();
-	const [form, setForm] = useState<FormData>({
+	const [form, setForm] = useState<AgentFormData>({
 		firstName: '',
 		lastName: '',
 		email: '',
 		number: '',
 		address: '',
-		academicQualification: '', // Initialize new field
+		academicQualification: '',
 	});
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const handleChange = (
 		e: ChangeEvent<
@@ -33,18 +35,30 @@ export default function BecomeAgent() {
 		setForm((prevForm) => ({ ...prevForm, [name]: value }));
 	};
 
-	const handleSubmit = (e: FormEvent) => {
+	const handleSubmit = async(e: FormEvent) => {
 		e.preventDefault();
-		// Handle form submission logic here (e.g., send to an API)
-		alert('Application submitted!');
-		setForm({
-			firstName: '',
-			lastName: '',
-			email: '',
-			number: '',
-			address: '',
-			academicQualification: '', // Reset new field
-		});
+		setIsSubmitting(true);
+		try {
+			const result = await submitToGoogleSheet(form);
+			if (result.success) {
+				alert('Application submitted successfully!');
+				setForm({
+					firstName: '',
+					lastName: '',
+					email: '',
+					number: '',
+					address: '',
+					academicQualification: '',
+				});
+			} else {
+				alert(`Submission failed: ${result.message}`);
+			}
+		} catch (error) {
+			console.error('Error submitting the form:', error);
+			alert('An error occurred. Please try again.');
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -264,9 +278,12 @@ export default function BecomeAgent() {
 
 					<button
 						type="submit"
-						className="bg-[#4D2A73] hover:bg-purple-800 text-white py-3 px-6 rounded-md w-full transition-colors duration-200 ease-in-out"
+						className="bg-[#4D2A73] hover:bg-purple-800 text-white py-3 px-6 rounded-md w-full transition-colors duration-200 ease-in-out disabled:bg-gray-400"
+						disabled={isSubmitting}
 					>
-						Submit application
+						{isSubmitting
+							? 'Submitting...'
+							: 'Submit application'}
 					</button>
 				</form>
 			</div>

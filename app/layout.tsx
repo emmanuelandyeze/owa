@@ -1,22 +1,10 @@
 import type { Metadata } from 'next';
 import {
-	Geist,
-	Geist_Mono,
 	Hanken_Grotesk,
 } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
 
 const hanken_grotesk = Hanken_Grotesk({
 	variable: '--font-hanken-grotesk',

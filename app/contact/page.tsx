@@ -6,6 +6,7 @@ import {
 	FaFacebook,
 	FaTwitter,
 } from 'react-icons/fa';
+import { submitContactForm } from '../actions';
 
 interface FormData {
 	firstName: string;
@@ -30,16 +31,32 @@ export default function ContactUs() {
 		setForm((prevForm) => ({ ...prevForm, [name]: value }));
 	};
 
-	const handleSubmit = (e: FormEvent) => {
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
+
+	const handleSubmit = async(e: FormEvent) => {
 		e.preventDefault();
 		// Handle form submission logic here (e.g., send to an API)
-		alert('Message sent!');
-		setForm({
-			firstName: '',
-			lastName: '',
-			email: '',
-			message: '',
-		});
+		setIsSubmitting(true);
+		try {
+			const result = await submitContactForm(form);
+			if (result.success) {
+				alert('Message sent successfully!');
+				setForm({
+					firstName: '',
+					lastName: '',
+					email: '',
+					message: '',
+				});
+			} else {
+				alert(`Submission failed: ${result.message}`);
+			}
+		} catch (error) {
+			console.error('Error submitting the form:', error);
+			alert('An error occurred. Please try again.');
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -197,9 +214,10 @@ export default function ContactUs() {
 
 					<button
 						type="submit"
-						className="bg-[#4D2A73] hover:bg-purple-800 text-white py-3 px-6 rounded-md w-full transition-colors duration-200 ease-in-out"
+						className="bg-[#4D2A73] hover:bg-purple-800 text-white py-3 px-6 rounded-md w-full transition-colors duration-200 ease-in-out disabled:bg-gray-400"
+						disabled={isSubmitting}
 					>
-						Send message
+						{isSubmitting ? 'Sending...' : 'Send message'}
 					</button>
 				</form>
 			</div>
