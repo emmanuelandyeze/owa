@@ -49,6 +49,7 @@ export async function submitToGoogleSheet(formData) {
 				formData.number,
 				formData.address,
 				formData.academicQualification,
+				formData.role
 			],
 		];
 

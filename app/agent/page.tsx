@@ -9,7 +9,8 @@ interface AgentFormData {
 	email: string;
 	number: string;
 	address: string;
-	academicQualification: string; // Added new field for academic qualification
+	academicQualification: string;
+	role: string;
 }
 
 export default function BecomeAgent() {
@@ -21,6 +22,7 @@ export default function BecomeAgent() {
 		number: '',
 		address: '',
 		academicQualification: '',
+		role: ''
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -49,6 +51,7 @@ export default function BecomeAgent() {
 					number: '',
 					address: '',
 					academicQualification: '',
+					role: ''
 				});
 			} else {
 				alert(`Submission failed: ${result.message}`);
@@ -88,7 +91,7 @@ export default function BecomeAgent() {
 				<div className="w-full lg:w-auto flex flex-col items-center lg:items-start text-center lg:text-left px-0 md:px-0">
 					<div className="max-w-[404px] flex flex-col gap-4 md:mb-8">
 						<h1 className="text-[24px] text-left leading-[24px] md:text-[48px] md:leading-[48px] font-[700] text-[#4D2A73]">
-							Become an OWA Agent
+							Register an OWA Agent or an Inventory Officer
 						</h1>
 						<p className="text-[#323C49] text-left text-[16px] md:text-[18px] font-[400]">
 							Are you passionate about empowering market
@@ -273,6 +276,29 @@ export default function BecomeAgent() {
 							<option value="ND">ND</option>
 							<option value="HND">HND</option>
 							<option value="BSc">BSc</option>
+						</select>
+					</div>
+
+					<div className="flex flex-col gap-1">
+						<label
+							htmlFor="role"
+							className="font-[500] text-[18px] text-[#344054]"
+						>
+							Select role
+						</label>
+						<select
+							id="role"
+							name="role"
+							value={form.role}
+							onChange={handleChange}
+							required
+							className="w-full p-3 bg-white rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+						>
+							<option value="">Select</option>{' '}
+							{/* Default disabled option */}
+							<option value="SSCE">Agent</option>
+							<option value="ND">Inventory officer</option>
+							
 						</select>
 					</div>
 
