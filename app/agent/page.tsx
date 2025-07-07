@@ -296,9 +296,8 @@ export default function BecomeAgent() {
 						>
 							<option value="">Select</option>{' '}
 							{/* Default disabled option */}
-							<option value="SSCE">Agent</option>
-							<option value="ND">Inventory officer</option>
-							
+							<option value="Agent">Agent</option>
+							<option value="Inventory officer">Inventory officer</option>
 						</select>
 					</div>
 
